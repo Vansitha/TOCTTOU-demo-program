@@ -39,7 +39,7 @@ int main()
     But in a real scenario you will not have permissions to delete the the file.*/
     if (!access(userFile, F_OK) == 0) 
     {
-        // Creates the file if it does not exist. Therefore no time for the attacker to create there own one.
+        // Creates the file if it does not exist. Therefore no time for the attacker to create their own one.
         FILE *fp1 = fopen(userFile, "a"); 
         fclose(fp1);
     }
