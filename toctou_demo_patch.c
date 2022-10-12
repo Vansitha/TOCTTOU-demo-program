@@ -32,11 +32,6 @@ int main()
     printf("Enter your ID: ");
     fgets(userId, sizeof(userId), stdin);
     
-    /* Does some additional processing using the user id. 
-       This is mimicked using the sleep function
-       Meanwhile this processing occurs the attacker has time to 
-       create the users.txt file if it does not exist 
-    */
 
     // START OF PATCH
 
@@ -50,6 +45,12 @@ int main()
     }
     // END OF PATCH
 
+
+    /* Does some additional processing using the user id. 
+       This is mimicked using the sleep function
+       Meanwhile this processing occurs the attacker has time to 
+       create the users.txt file if it does not exist 
+    */
     printf("Processing...\n");
     sleep(10); // set to 10 seconds for demo purpose only. Usally a very small window.
 

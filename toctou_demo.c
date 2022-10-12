@@ -36,7 +36,6 @@ int main()
        Meanwhile this processing occurs the attacker has time to 
        create the users.txt file if it does not exist 
     */
-
     printf("Processing...\n");
     sleep(10); // set to 10 seconds for demo purpose only. Usally a very small window.
 
