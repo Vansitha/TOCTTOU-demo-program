@@ -41,7 +41,7 @@ int main()
     // START OF PATCH
     if (!access(userFile, F_OK) == 0) 
     {
-        FILE *fp1 = fopen(filename, "a");
+        FILE *fp1 = fopen(userFile, "a");
         fclose(fp1);
     }
     // END OF PATCH
