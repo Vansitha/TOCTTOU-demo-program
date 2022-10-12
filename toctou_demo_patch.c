@@ -40,11 +40,12 @@ int main()
 
     // START OF PATCH
 
-    /* In this demo you can delete the file as soon as it is created and recreate your own one 
-    by in a real scenario you will not have permissions to make changes to the file.*/
+    /* In this demo you can delete the file as soon as it is created and recreate your own one. 
+    but in a real scenario you will not have permissions to make changes to the file.*/
     if (!access(userFile, F_OK) == 0) 
     {
-        FILE *fp1 = fopen(userFile, "a");
+        // Creates the file if it does not exist. Therefore no time for the attacker to create there own one.
+        FILE *fp1 = fopen(userFile, "a"); 
         fclose(fp1);
     }
     // END OF PATCH
