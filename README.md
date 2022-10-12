@@ -12,10 +12,10 @@ Step 2 - Run
 
 `./toctou_demo`
 
-- Pass in any string when the program asks for input.
-- When the program displays `Processing...` create a file called `users.txt` in your current working directory to see the exploit in action. 
+- Pass in a string of size 20 or less when the program asks for input.
+- When the program displays `Processing...` create a file called `users.txt` in your current working directory to see the exploit in action [10 second window to create the file].
 - After the program completes it execution check the `users.txt` file. It will contain the id of the user.
-- Note that you are the owner of this file therefore it can be used for any malicious activity, which is the goal.
-- Now delete the `users.txt` file and run again.
+- Note that you are the owner of this file therefore it can be used for any malicious activity.
+- Now delete the `users.txt` file and run the program again.
 - The program itself will create the file and put in the user id in it. Note that in a real scenerio you
-will not be ther owner of that file. Therefore you will not be able to view or update its content.
+will not be the owner of that file. Therefore you will not be able to view or update its content.
