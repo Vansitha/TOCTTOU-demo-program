@@ -36,22 +36,15 @@ int main()
        Meanwhile this processing occurs the attacker has time to 
        create the users.txt file if it does not exist 
     */
+
     printf("Processing...\n");
     sleep(10); // set to 10 seconds for demo purpose only. Usally a very small window.
 
-    // Note that initally there is no file in the system called "users.txt"
-    if (access(userFile, F_OK) == 0) 
-    {
-        // This occurs only if the attacker creates the file before the program does
-        // From this point the attacker has full control of the file.
-        printf("File found. Writing %s to file.\n", userId);
-        writeToFile(userFile, userId);
-    }
-    else 
-    {   
-        // Tf the file is not found in a normal secnaerio it creates the file and appends the user id
-        printf("File not found, created new file...\n");
-        writeToFile(userFile, userId);
-    }
+    /* The writeToFile function will create the user file if it does not exist but if it already does
+    exists it will just append the value to that file. Therefore intially when the file is not available
+    and the attacker creates the file called "users.txt" all the data will be written to it which they
+    have access to */
+    printf("Writing id to file.\n");
+    writeToFile(userFile, userId);
 
 }

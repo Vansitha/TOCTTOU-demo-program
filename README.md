@@ -18,4 +18,4 @@ Step 2 - Run
 - Note that you are the owner of this file therefore it can be used for any malicious activity.
 - Now delete the `users.txt` file and run the program again.
 - The program itself will create the file and put in the user id in it. Note that in a real scenerio you
-will not be the owner of that file. Therefore you will not be able to view or update its content.
+will not be the owner of that file. Therefore you will not have access to the file.
